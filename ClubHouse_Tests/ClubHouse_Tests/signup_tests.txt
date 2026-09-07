@@ -1,0 +1,71 @@
+# SIGN UP TEST CASES   (Boundary Value Analysis)
+# format:  name , student_id , email , password , confirm , department , terms , yes/no
+#   terms = yes -> tick the box , anything else -> leave it un-ticked
+#   yes = signup MUST work (go to login page)
+#   no  = signup MUST be refused (stay on register page)
+# {n}    = a random number the code fills in (makes email/id new every run)
+# {long} = 256 letters (the "too long" edge)
+# VALID cases are FIRST (server allows only 3 signups/minute).
+
+# ---- 1) correct signups (8-char and 9-char passwords = the min-length edge) ----
+Rahim Uddin , NSTU{n} , rahim.uddin{n}@student.nstu.edu.bd , Rahim1234 , Rahim1234 , CSE , yes , yes
+Fatima Akter , NSTU{n} , fatima.akter{n}@student.nstu.edu.bd , Fatima24 , Fatima24 , EEE , yes , yes
+
+# ---- 2) empty required boxes ----
+ , NSTU{n} , noname{n}@student.nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+Tanvir Hasan ,  , noid{n}@student.nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+Sadia Islam , NSTU{n} ,  , Test1234 , Test1234 , CSE , yes , no
+Nusrat Jahan , NSTU{n} , nusrat{n}@student.nstu.edu.bd ,  , Test1234 , CSE , yes , no
+Arif Chowdhury , NSTU{n} , arif{n}@student.nstu.edu.bd , Test1234 ,  , CSE , yes , no
+Hasib Ahnaf ,  ,  , Test1234 , Test1234 , CSE , yes , no
+
+# ---- 3) terms box not ticked ----
+Mim Akter , NSTU{n} , mim{n}@student.nstu.edu.bd , Test1234 , Test1234 , CSE , no , no
+Sneha Roy , NSTU{n} , sneha{n}@student.nstu.edu.bd , Test1234 , Test1234 , CSE ,  , no
+
+# ---- 4) broken email shapes ----
+Imran Hossain , NSTU{n} , imranhossain , Test1234 , Test1234 , CSE , yes , no
+Zahid Hasan , NSTU{n} , zahid@ , Test1234 , Test1234 , CSE , yes , no
+Priya Das , NSTU{n} , @student.nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+Rifat Mahmud , NSTU{n} , rifat mahmud@student.nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+Adnan Sami , NSTU{n} , adnan@@student.nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+Robert Tables , NSTU{n} , robert';drop table , Test1234 , Test1234 , CSE , yes , no
+
+# ---- 5) wrong email domain (must end with @student.nstu.edu.bd) ----
+Sabbir Ahmed , NSTU{n} , sabbir{n}@gmail.com , Test1234 , Test1234 , CSE , yes , no
+Oindrila Roy , NSTU{n} , oindrila{n}@yahoo.com , Test1234 , Test1234 , CSE , yes , no
+Farhan Kabir , NSTU{n} , farhan{n}@hotmail.com , Test1234 , Test1234 , CSE , yes , no
+Mehedi Hasan , NSTU{n} , mehedi{n}@nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+Sanjida Khatun , NSTU{n} , sanjida{n}@student.nstu.edu , Test1234 , Test1234 , CSE , yes , no
+Tahmid Rahman , NSTU{n} , tahmid{n}@student.nstu.edu.bd.com , Test1234 , Test1234 , CSE , yes , no
+Anika Bushra , NSTU{n} , anika{n}@student.edu.bd , Test1234 , Test1234 , BBA , yes , no
+Tamim Iqbal , NSTU{n} , tamim{n}@student.nstu.ac.bd , Test1234 , Test1234 , CSE , yes , no
+Nayeem Islam , NSTU{n} , nayeem{n}@student.nstu.edu.bd.evil.com , Test1234 , Test1234 , CSE , yes , no
+Sadia Afrin , NSTU{n} , sadiaafrin{n}@studentnstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+
+# ---- 6) weak / short password (need 8+ with letters AND numbers) ----
+Nafisa Tabassum , NSTU{n} , nafisa{n}@student.nstu.edu.bd , Test123 , Test123 , CSE , yes , no
+Shakib Hasan , NSTU{n} , shakib{n}@student.nstu.edu.bd , 1234567 , 1234567 , CSE , yes , no
+Rakibul Islam , NSTU{n} , rakib{n}@student.nstu.edu.bd , 12345678 , 12345678 , CSE , yes , no
+Jannatul Ferdous , NSTU{n} , janna{n}@student.nstu.edu.bd , abcdefgh , abcdefgh , CSE , yes , no
+Fahim Shahriar , NSTU{n} , fahim{n}@student.nstu.edu.bd , Ab1 , Ab1 , CSE , yes , no
+Naimur Rahman , NSTU{n} , naimur{n}@student.nstu.edu.bd , 00000000 , 00000000 , CSE , yes , no
+Lamia Islam , NSTU{n} , lamia{n}@student.nstu.edu.bd , Ab12 , Ab12 , CSE , yes , no
+Tania Sultana , NSTU{n} , tania{n}@student.nstu.edu.bd , ABCDEFGH , ABCDEFGH , CSE , yes , no
+Rina Akter , NSTU{n} , rina{n}@student.nstu.edu.bd , 7chars1 , 7chars1 , CSE , yes , no
+Zannat Ara , NSTU{n} , zannat{n}@student.nstu.edu.bd , abc123 , abc123 , CSE , yes , no
+
+# ---- 7) password and confirm do not match ----
+Tasnim Anika , NSTU{n} , tasnim{n}@student.nstu.edu.bd , Test1234 , Test9999 , CSE , yes , no
+Mahmudul Karim , NSTU{n} , karim{n}@student.nstu.edu.bd , Karim1234 , karim1234 , CSE , yes , no
+Ishtiaq Ahmed , NSTU{n} , ishtiaq{n}@student.nstu.edu.bd , Test1234 , Test12345 , CSE , yes , no
+Wasif Rahman , NSTU{n} , wasif{n}@student.nstu.edu.bd , Test1234 , Wasif1234 , EEE , yes , no
+
+# ---- 8) too-long name / too-long or empty department ----
+{long} , NSTU{n} , longname{n}@student.nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+Sumaiya Rahman , NSTU{n} , summa{n}@student.nstu.edu.bd , Test1234 , Test1234 ,  , yes , no
+Zarin Tasnim , NSTU{n} , zarin{n}@student.nstu.edu.bd , Test1234 , Test1234 , {long} , yes , no
+
+# ---- 9) already-taken email / student id ----
+Copy Cat , NSTU{n} , selenium.tester@student.nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no
+Same Id , SEL0000001 , newid{n}@student.nstu.edu.bd , Test1234 , Test1234 , CSE , yes , no

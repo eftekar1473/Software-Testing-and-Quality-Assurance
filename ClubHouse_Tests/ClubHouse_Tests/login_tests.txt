@@ -1,0 +1,69 @@
+# LOGIN TEST CASES   (Boundary Value Analysis)
+# format:  email , password , yes/no
+#   yes = this login MUST work (go to dashboard)
+#   no  = this login MUST be blocked
+# lines starting with # are notes (skipped). VALID case is FIRST on purpose
+# (the server only allows a few logins per minute, so the good one runs early).
+
+# ---- 1) the one correct login ----
+selenium.tester@student.nstu.edu.bd , Test1234 , yes
+
+# ---- 2) empty boxes (required) ----
+ ,  , no
+ , Test1234 , no
+selenium.tester@student.nstu.edu.bd ,  , no
+
+# ---- 3) broken email shapes (bad format) ----
+rahimuddin , Test1234 , no
+rahim.uddin@ , Test1234 , no
+@student.nstu.edu.bd , Test1234 , no
+rahim uddin@student.nstu.edu.bd , Test1234 , no
+rahim@@student.nstu.edu.bd , Test1234 , no
+rahim.uddin@student nstu.edu.bd , Test1234 , no
+
+# ---- 4) real-looking students who never registered (must fail) ----
+rahim.uddin@student.nstu.edu.bd , Rahim1234 , no
+fatima.akter@student.nstu.edu.bd , Fatima2024 , no
+tanvir.hasan@student.nstu.edu.bd , Tanvir999 , no
+sadia.islam@student.nstu.edu.bd , Sadia1122 , no
+mahmudul.karim@student.nstu.edu.bd , Karim7788 , no
+nusrat.jahan@student.nstu.edu.bd , Nusrat456 , no
+arif.chowdhury@student.nstu.edu.bd , Arif2025 , no
+sumaiya.rahman@student.nstu.edu.bd , Summa1234 , no
+rakibul.islam@student.nstu.edu.bd , Rakib0001 , no
+jannatul.ferdous@student.nstu.edu.bd , Janna2024 , no
+fahim.shahriar@student.nstu.edu.bd , Fahim5566 , no
+tasnim.anika@student.nstu.edu.bd , Anika3344 , no
+imran.hossain@student.nstu.edu.bd , Imran7890 , no
+mim.akter@student.nstu.edu.bd , MimAkter12 , no
+shakib.hasan@student.nstu.edu.bd , Shakib075 , no
+nafisa.tabassum@student.nstu.edu.bd , Nafisa123 , no
+zahid.hasan@student.nstu.edu.bd , Zahid4567 , no
+sabbir.ahmed@student.nstu.edu.bd , Sabbir890 , no
+priya.das@student.nstu.edu.bd , PriyaDas12 , no
+rifat.mahmud@student.nstu.edu.bd , Rifat3210 , no
+oindrila.roy@student.nstu.edu.bd , Oindri456 , no
+mehedi.hasan@student.nstu.edu.bd , Mehedi777 , no
+sanjida.khatun@student.nstu.edu.bd , Sanji1234 , no
+tahmid.rahman@student.nstu.edu.bd , Tahmid555 , no
+nayeem.islam@student.nstu.edu.bd , Nayeem321 , no
+
+# ---- 5) valid shape but wrong domain (still unknown user) ----
+rahim.uddin@gmail.com , Rahim1234 , no
+arif@yahoo.com , Arif2025 , no
+sadia.islam@outlook.com , Sadia1122 , no
+student@nstu.edu.bd , Test1234 , no
+
+# ---- 6) correct email but WRONG password ----
+selenium.tester@student.nstu.edu.bd , wrongpass , no
+selenium.tester@student.nstu.edu.bd , Test12345 , no
+selenium.tester@student.nstu.edu.bd , test1234 , no
+
+# ---- 7) tiny / huge password (still unknown user) ----
+tanvir.hasan@student.nstu.edu.bd , 1 , no
+sadia.islam@student.nstu.edu.bd , 123456789012345678901234567890 , no
+
+# ---- 8) attack-looking + classic examples ----
+' OR '1'='1 , anypass , no
+admin@123gmail.com , 1234 , no
+test@ , 1234 , no

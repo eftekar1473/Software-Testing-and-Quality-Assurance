@@ -1,0 +1,26 @@
+# MAIN UI TEST CASES   -- pages to open AFTER login
+# format:  url_path , word_in_tab_title , yes/no
+#   yes = normal student MUST be able to open this page
+#   no  = normal student must be BLOCKED (admin-only page -> sent to dashboard)
+# (the code logs in first, then opens each page and checks the tab title,
+#  that it did not crash, and that it did not throw us back to /login)
+
+# ---- normal pages: must open ----
+/dashboard , Dashboard , yes
+/clubs , Clubs , yes
+/events , Events , yes
+/announcements , Announcements , yes
+/recruitment , Recruitment , yes
+/notifications , Notifications , yes
+/search , Search , yes
+/profile , Profile , yes
+
+# ---- admin-only pages: a normal student must be blocked ----
+/admin/users , Admin , no
+/admin/clubs , Admin , no
+/admin/audit-logs , Admin , no
+/admin/reports , Admin , no
+
+# ---- unknown pages: must show the 404 page ----
+/some-random-xyz-page , 404 , yes
+/totally/fake/route , 404 , yes

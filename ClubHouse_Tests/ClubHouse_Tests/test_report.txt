@@ -1,0 +1,166 @@
+======== SIGN UP TEST ========
+PASS | rahim.uddin159839@student.nstu.edu.bd | pw: Rahim1234 -> registered
+PASS | fatima.akter344236@student.nstu.edu.bd | pw: Fatima24 -> registered
+PASS | noname350316@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | noid237775@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS |  | pw: Test1234 -> refused (good)
+PASS | nusrat73614@student.nstu.edu.bd | pw:  -> refused (good)
+PASS | arif130884@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS |  | pw: Test1234 -> refused (good)
+PASS | mim667302@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | sneha720217@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | imranhossain | pw: Test1234 -> refused (good)
+PASS | zahid@ | pw: Test1234 -> refused (good)
+PASS | @student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | rifat mahmud@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | adnan@@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | robert';drop table | pw: Test1234 -> refused (good)
+PASS | sabbir823264@gmail.com | pw: Test1234 -> refused (good)
+PASS | oindrila130364@yahoo.com | pw: Test1234 -> refused (good)
+PASS | farhan381944@hotmail.com | pw: Test1234 -> refused (good)
+PASS | mehedi846665@nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | sanjida436363@student.nstu.edu | pw: Test1234 -> refused (good)
+PASS | tahmid780199@student.nstu.edu.bd.com | pw: Test1234 -> refused (good)
+PASS | anika213861@student.edu.bd | pw: Test1234 -> refused (good)
+PASS | tamim142499@student.nstu.ac.bd | pw: Test1234 -> refused (good)
+PASS | nayeem227887@student.nstu.edu.bd.evil.com | pw: Test1234 -> refused (good)
+PASS | sadiaafrin65956@studentnstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | nafisa124159@student.nstu.edu.bd | pw: Test123 -> refused (good)
+PASS | shakib849553@student.nstu.edu.bd | pw: 1234567 -> refused (good)
+PASS | rakib306049@student.nstu.edu.bd | pw: 12345678 -> refused (good)
+PASS | janna323976@student.nstu.edu.bd | pw: abcdefgh -> refused (good)
+PASS | fahim294327@student.nstu.edu.bd | pw: Ab1 -> refused (good)
+PASS | naimur851492@student.nstu.edu.bd | pw: 00000000 -> refused (good)
+PASS | lamia616278@student.nstu.edu.bd | pw: Ab12 -> refused (good)
+PASS | tania982451@student.nstu.edu.bd | pw: ABCDEFGH -> refused (good)
+PASS | rina845356@student.nstu.edu.bd | pw: 7chars1 -> refused (good)
+PASS | zannat258621@student.nstu.edu.bd | pw: abc123 -> refused (good)
+PASS | tasnim935840@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | karim184630@student.nstu.edu.bd | pw: Karim1234 -> refused (good)
+PASS | ishtiaq836015@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | wasif566583@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | longname570719@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | summa568351@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | zarin930831@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | selenium.tester@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+PASS | newid961853@student.nstu.edu.bd | pw: Test1234 -> refused (good)
+SIGN UP RESULT: 45 passed, 0 failed
+
+======== LOGIN TEST ========
+PASS | selenium.tester@student.nstu.edu.bd | login worked
+PASS |  | blocked (good)
+PASS |  | blocked (good)
+PASS | selenium.tester@student.nstu.edu.bd | blocked (good)
+PASS | rahimuddin | blocked (good)
+PASS | rahim.uddin@ | blocked (good)
+PASS | @student.nstu.edu.bd | blocked (good)
+PASS | rahim uddin@student.nstu.edu.bd | blocked (good)
+PASS | rahim@@student.nstu.edu.bd | blocked (good)
+PASS | rahim.uddin@student nstu.edu.bd | blocked (good)
+PASS | rahim.uddin@student.nstu.edu.bd | blocked (good)
+PASS | fatima.akter@student.nstu.edu.bd | blocked (good)
+PASS | tanvir.hasan@student.nstu.edu.bd | blocked (good)
+PASS | sadia.islam@student.nstu.edu.bd | blocked (good)
+PASS | mahmudul.karim@student.nstu.edu.bd | blocked (good)
+PASS | nusrat.jahan@student.nstu.edu.bd | blocked (good)
+PASS | arif.chowdhury@student.nstu.edu.bd | blocked (good)
+PASS | sumaiya.rahman@student.nstu.edu.bd | blocked (good)
+PASS | rakibul.islam@student.nstu.edu.bd | blocked (good)
+PASS | jannatul.ferdous@student.nstu.edu.bd | blocked (good)
+PASS | fahim.shahriar@student.nstu.edu.bd | blocked (good)
+PASS | tasnim.anika@student.nstu.edu.bd | blocked (good)
+PASS | imran.hossain@student.nstu.edu.bd | blocked (good)
+PASS | mim.akter@student.nstu.edu.bd | blocked (good)
+PASS | shakib.hasan@student.nstu.edu.bd | blocked (good)
+PASS | nafisa.tabassum@student.nstu.edu.bd | blocked (good)
+PASS | zahid.hasan@student.nstu.edu.bd | blocked (good)
+PASS | sabbir.ahmed@student.nstu.edu.bd | blocked (good)
+PASS | priya.das@student.nstu.edu.bd | blocked (good)
+PASS | rifat.mahmud@student.nstu.edu.bd | blocked (good)
+PASS | oindrila.roy@student.nstu.edu.bd | blocked (good)
+PASS | mehedi.hasan@student.nstu.edu.bd | blocked (good)
+PASS | sanjida.khatun@student.nstu.edu.bd | blocked (good)
+PASS | tahmid.rahman@student.nstu.edu.bd | blocked (good)
+PASS | nayeem.islam@student.nstu.edu.bd | blocked (good)
+PASS | rahim.uddin@gmail.com | blocked (good)
+PASS | arif@yahoo.com | blocked (good)
+PASS | sadia.islam@outlook.com | blocked (good)
+PASS | student@nstu.edu.bd | blocked (good)
+PASS | selenium.tester@student.nstu.edu.bd | blocked (good)
+PASS | selenium.tester@student.nstu.edu.bd | blocked (good)
+PASS | selenium.tester@student.nstu.edu.bd | blocked (good)
+PASS | tanvir.hasan@student.nstu.edu.bd | blocked (good)
+PASS | sadia.islam@student.nstu.edu.bd | blocked (good)
+PASS | ' OR '1'='1 | blocked (good)
+PASS | admin@123gmail.com | blocked (good)
+PASS | test@ | blocked (good)
+LOGIN RESULT: 47 passed, 0 failed
+
+======== MAIN UI TEST ========
+PASS | /dashboard -> opened correctly
+======== MAIN UI TEST ========
+PASS | /dashboard -> opened correctly
+PASS | /clubs -> opened correctly
+PASS | /events -> opened correctly
+PASS | /announcements -> opened correctly
+PASS | /recruitment -> opened correctly
+PASS | /notifications -> opened correctly
+PASS | /search -> opened correctly
+PASS | /profile -> opened correctly
+PASS | /admin/users -> blocked (good)
+PASS | /admin/clubs -> blocked (good)
+PASS | /admin/audit-logs -> blocked (good)
+PASS | /admin/reports -> blocked (good)
+PASS | /some-random-xyz-page -> opened correctly
+PASS | /totally/fake/route -> opened correctly
+MAIN UI RESULT: 14 passed, 0 failed
+
+======== SIGN UP TEST ========
+PASS | rahim.uddin400930@student.nstu.edu.bd | pw: Rahim1234 -> registered
+PASS | fatima.akter742088@student.nstu.edu.bd | pw: Fatima24 -> registered
+======== LOGIN TEST ========
+PASS | selenium.tester@student.nstu.edu.bd | login worked
+PASS |  | blocked (good)
+PASS |  | blocked (good)
+PASS | selenium.tester@student.nstu.edu.bd | blocked (good)
+PASS | rahimuddin | blocked (good)
+PASS | rahim.uddin@ | blocked (good)
+PASS | @student.nstu.edu.bd | blocked (good)
+PASS | rahim uddin@student.nstu.edu.bd | blocked (good)
+PASS | rahim@@student.nstu.edu.bd | blocked (good)
+PASS | rahim.uddin@student nstu.edu.bd | blocked (good)
+PASS | rahim.uddin@student.nstu.edu.bd | blocked (good)
+PASS | fatima.akter@student.nstu.edu.bd | blocked (good)
+PASS | tanvir.hasan@student.nstu.edu.bd | blocked (good)
+PASS | sadia.islam@student.nstu.edu.bd | blocked (good)
+PASS | mahmudul.karim@student.nstu.edu.bd | blocked (good)
+PASS | nusrat.jahan@student.nstu.edu.bd | blocked (good)
+PASS | arif.chowdhury@student.nstu.edu.bd | blocked (good)
+PASS | sumaiya.rahman@student.nstu.edu.bd | blocked (good)
+PASS | rakibul.islam@student.nstu.edu.bd | blocked (good)
+PASS | jannatul.ferdous@student.nstu.edu.bd | blocked (good)
+PASS | fahim.shahriar@student.nstu.edu.bd | blocked (good)
+PASS | tasnim.anika@student.nstu.edu.bd | blocked (good)
+PASS | imran.hossain@student.nstu.edu.bd | blocked (good)
+PASS | mim.akter@student.nstu.edu.bd | blocked (good)
+PASS | shakib.hasan@student.nstu.edu.bd | blocked (good)
+PASS | nafisa.tabassum@student.nstu.edu.bd | blocked (good)
+PASS | zahid.hasan@student.nstu.edu.bd | blocked (good)
+PASS | sabbir.ahmed@student.nstu.edu.bd | blocked (good)
+======== MAIN UI TEST ========
+PASS | /dashboard -> opened correctly
+PASS | /clubs -> opened correctly
+PASS | /events -> opened correctly
+PASS | /announcements -> opened correctly
+PASS | /recruitment -> opened correctly
+PASS | /notifications -> opened correctly
+PASS | /search -> opened correctly
+PASS | /profile -> opened correctly
+PASS | /admin/users -> blocked (good)
+PASS | /admin/clubs -> blocked (good)
+PASS | /admin/audit-logs -> blocked (good)
+PASS | /admin/reports -> blocked (good)
+PASS | /some-random-xyz-page -> opened correctly
+PASS | /totally/fake/route -> opened correctly
+MAIN UI RESULT: 14 passed, 0 failed
+
